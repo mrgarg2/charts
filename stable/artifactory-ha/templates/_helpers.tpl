@@ -219,7 +219,8 @@ Resolve customVolumes value
 {{- define "artifactory-ha.customVolumes" -}}
 {{- if .Values.global.customVolumes -}}
 {{- .Values.global.customVolumes -}}
-{{- else if .Values.artifactory.customVolumes -}}
+{{- end -}}
+{{- if .Values.artifactory.customVolumes -}}
 {{- .Values.artifactory.customVolumes -}}
 {{- end -}}
 {{- end -}}
@@ -230,7 +231,8 @@ Resolve customVolumeMounts value
 {{- define "artifactory-ha.customVolumeMounts" -}}
 {{- if .Values.global.customVolumeMounts -}}
 {{- .Values.global.customVolumeMounts -}}
-{{- else if .Values.artifactory.customVolumeMounts -}}
+{{- end -}}
+{{- if .Values.artifactory.customVolumeMounts -}}
 {{- .Values.artifactory.customVolumeMounts -}}
 {{- end -}}
 {{- end -}}
